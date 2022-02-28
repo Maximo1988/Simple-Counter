@@ -9,4 +9,11 @@ import "../styles/index.css";
 import Home from "./component/home.jsx";
 
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+let numeracion = 0;
+setInterval(() => {
+	ReactDOM.render(
+		<Home numSecs={numeracion} />,
+		document.querySelector("#app")
+	);
+	numeracion++;
+}, 1000);
