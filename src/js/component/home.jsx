@@ -1,17 +1,13 @@
 import React from "react";
-import PropType from "prop-types";
-import SecondsCounter from "./conteo";
+import PropTypes from "prop-types";
 
 //create your first component
 
 const Home = (props) => {
-	return (
-		<div>
-			<SecondsCounter seconds={props.numSecs} />
-		</div>
-	);
+	return <div>{props.numSecs}</div>;
 };
+
 Home.propTypes = {
-	numSecs: PropType.number,
+	numSecs: PropTypes.number,
 };
 export default Home;
